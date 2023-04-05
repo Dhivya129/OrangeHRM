@@ -8,7 +8,7 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %c{2} -%msg%n"/>
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="20 KB"/>
+                <SizeBasedTriggeringPolicy size="100 KB"/>
             </Policies>
         </RollingFile>
         <Console name="Console">
@@ -16,7 +16,7 @@
         </Console>
     </Appenders>
     <Loggers>
-       <Root level="all">
+       <Root level="error">
             <AppenderRef ref="File"/>
         </Root> 
         

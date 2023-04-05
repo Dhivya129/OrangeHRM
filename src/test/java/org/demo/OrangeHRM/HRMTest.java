@@ -71,5 +71,17 @@ public class HRMTest extends BaseTest{
 		}
 	}
 	
+	public void leaveListTest()
+	{
+		try {
+			ip.clickLeaveModule();
+			test.log(Status.INFO,"Admin Module is clicked");
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
 	
 }
