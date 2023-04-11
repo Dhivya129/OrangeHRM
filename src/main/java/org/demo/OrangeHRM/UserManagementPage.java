@@ -20,7 +20,7 @@ public class UserManagementPage extends BasePage {
     @FindBy(xpath="//label[text()='Status']/parent::div/following-sibling::div//i")
 	WebElement statusButton;
 	
-	@FindBy(xpath="//div[@role='option']/span[text()='Enabled']")
+	@FindBy(xpath="//div[@role='option']//span[contains(text(),'Enabled')]")
 	WebElement statusOption;
 	
 	

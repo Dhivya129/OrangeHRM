@@ -81,7 +81,7 @@ public class HRMTest extends BaseTest{
 			test.log(Status.INFO,"From Date is selected");
 			leavePage.setToDate("2023-1-25");
 			test.log(Status.INFO,"To Date is selected");
-			leavePage.selectLeaveStatus("Taken");
+			leavePage.selectLeaveStatus("Pending Approval");
 			test.log(Status.INFO,"Leave Status is selected");
 			leavePage.selectLeaveType("CAN - Personal");
 			test.log(Status.INFO,"Leave Type is selected");

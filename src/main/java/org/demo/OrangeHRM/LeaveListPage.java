@@ -54,6 +54,7 @@ public class LeaveListPage extends BasePage{
 		for(int i=0;i<size;i++)
 		{
 			WebElement element=leaveStatusOptions.get(i);
+			System.out.println("Leave Status:");
 			if(element.getText().equals(status))
 			{
 				element.click();
@@ -67,8 +68,9 @@ public class LeaveListPage extends BasePage{
 		leaveTypeBtn.click();
 		int size=leaveTypeOptions.size();
 		for(int i=0;i<size;i++)
-		{
+		{    
 			WebElement element=leaveTypeOptions.get(i);
+			System.out.println("Leave Type:"+ element.getText());
 			if(element.getText().equals(leaveType))
 			{
 				element.click();

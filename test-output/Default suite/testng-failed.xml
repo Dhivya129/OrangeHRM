@@ -5,7 +5,9 @@
     <classes>
       <class name="org.demo.OrangeHRM.HRMTest">
         <methods>
-          <include name="setUpReporting"/>
+          <include name="setUp"/>
+          <include name="leaveListTest"/>
+          <include name="loginTest"/>
           <include name="userManagementTest"/>
           <include name="tearDown"/>
         </methods>
