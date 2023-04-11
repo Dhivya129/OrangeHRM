@@ -13,6 +13,7 @@ public class HRMTest extends BaseTest{
 
 	LoginPage lp=null;
 	IndexPage ip=null;
+	LeaveListPage leavePage;
 	UserManagementPage up=null;
 	
 	private static final Logger log = LogManager.getLogger(HRMTest.class.getName());
@@ -22,7 +23,7 @@ public class HRMTest extends BaseTest{
 	{ 
 		test=extent.createTest("Login Test");
 		lp=new LoginPage(driver);
-		
+		leavePage=new LeaveListPage(driver);
 		ip=new IndexPage(driver);
 		lp.setUsername("Admin");
 		test.log(Status.INFO,"Username was entered");
@@ -70,16 +71,26 @@ public class HRMTest extends BaseTest{
 			log.error(e);
 		}
 	}
-	
+	@Test(priority=2)
 	public void leaveListTest()
 	{
 		try {
 			ip.clickLeaveModule();
-			test.log(Status.INFO,"Admin Module is clicked");
+			test.log(Status.INFO,"Leave Module is clicked");
+			leavePage.setFromDate("2023-1-20");
+			test.log(Status.INFO,"From Date is selected");
+			leavePage.setToDate("2023-1-25");
+			test.log(Status.INFO,"To Date is selected");
+			leavePage.selectLeaveStatus("Taken");
+			test.log(Status.INFO,"Leave Status is selected");
+			leavePage.selectLeaveType("CAN - Personal");
+			test.log(Status.INFO,"Leave Type is selected");
+			leavePage.clickSearchButton();
+			
 		}
 		catch(Exception e)
 		{
-			
+			log.error(e);
 		}
 	}
 	

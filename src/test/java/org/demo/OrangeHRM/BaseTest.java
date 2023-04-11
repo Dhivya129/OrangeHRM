@@ -22,7 +22,7 @@ public class BaseTest {
 	String baseUrl;
 	
 	@BeforeClass
-	public void setUpReporting()
+	public void setUp()
 	{
 		extent=new ExtentReports();
 	    extent.setSystemInfo("Project Name","OrangeHRM Automation");
